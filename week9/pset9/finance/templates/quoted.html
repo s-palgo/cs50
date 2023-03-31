@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="text-center">
+        <p>Name: {{ name }}</p>
+        <p>Price: ${{ price }}</p>
+        <p>Symbol: {{ symbol }}</p>
+    </div>
+{% endblock %}

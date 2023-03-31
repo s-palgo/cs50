@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: Running sort1 on sorted50000.txt (e.g. the best scenario for 50000 numbers) and reversed50000.txt (e.g. the worst case scenario for 50000 numbers) gave me times of 5.033s and 12.255s, respectively, which meant that the big O and big omega times of this sort were not equal, and so I was able to eliminate both selection sort and merge sort and pick bubble sort, because both selection sort and merge sort have identical big O and big omega times.
+
+sort2 uses: merge sort
+
+How do you know?: After running sort2 and sort3 on the sorted and reversed txt files in order to glean the big O and big omega times of sort2 and sort3, I found that sort2 consistently finished with faster sorting times than did sort3. For example, for sorted50000.txt, sort2 had a time of 7.282s while sort3 had a time of 9.077s. Similarly, for reversed50000.txt, sort2 had a time of 4.971s while sort3 had a time of 9.894s. Since I already knew that sort1 was bubble sort, I also then knew that the only two remaining options were selection sort and merge sort. And since sort2 was consistently faster than sort3, I knew that sort2 was merge sort, because merge sort has a faster theta value (n*logn) than selection sort (n^2).
+
+sort3 uses: selection sort
+
+How do you know?: The only remaining option after going through the process defined in my explanations for sort1 and sort2 was selection sort.

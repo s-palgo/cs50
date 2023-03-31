@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            const rohanBtn = document.getElementById("rohan-btn");
+            const vandanBtn = document.getElementById("vandan-btn");
+            const gopalBtn = document.getElementById("gopal-btn");
+            const anshBtn = document.getElementById("ansh-btn");
+            const bhavikBtn = document.getElementById("bhavik-btn");
+            const firstQuestion = document.getElementById("question1");
+            const result = document.getElementById("result");
+            const secondQuestionResult = document.getElementById("result2");
+            const frAnswer = document.getElementById("fr-answer");
+            const checkAnswerTwoBtn = document.getElementById("check-answer2");
+
+            checkAnswerTwoBtn.addEventListener("click", function () {
+                if (frAnswer.value.toLowerCase() === "cs50") {
+                    frAnswer.style.borderStyle = "solid";
+                    frAnswer.style.borderColor = "#4CAF50";
+                    secondQuestionResult.innerHTML = "Correct!";
+                } else {
+                    frAnswer.style.borderStyle = "solid";
+                    frAnswer.style.borderColor = "#f44336";
+                    secondQuestionResult.innerHTML = "Incorrect.";
+                }
+            });
+
+            rohanBtn.addEventListener("click", function () {
+                rohanBtn.style.backgroundColor = "#f44336";
+                rohanBtn.style.color = "white";
+                result.innerHTML = "Incorrect.";
+            });
+
+            vandanBtn.addEventListener("click", function () {
+                vandanBtn.style.backgroundColor = "#f44336";
+                vandanBtn.style.color = "white";
+                result.innerHTML = "Incorrect.";
+            });
+
+            gopalBtn.addEventListener("click", function () {
+                gopalBtn.style.backgroundColor = "#4CAF50";
+                gopalBtn.style.color = "white";
+                result.innerHTML = "Correct!";
+            });
+
+            anshBtn.addEventListener("click", function () {
+                anshBtn.style.backgroundColor = "#f44336";
+                anshBtn.style.color = "white";
+                result.innerHTML = "Incorrect.";
+            });
+
+            bhavikBtn.addEventListener("click", function () {
+                bhavikBtn.style.backgroundColor = "#f44336";
+                bhavikBtn.style.color = "white";
+                result.innerHTML = "Incorrect.";
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 id="question1">What is my brother's name?</h3>
+                <p id="result"></p>
+                <input type="submit" value="Rohan" id="rohan-btn" class="mc-answer-btn">
+                <input type="submit" value="Vandan" id="vandan-btn" class="mc-answer-btn">
+                <input type="submit" value="Gopal" id="gopal-btn" class="mc-answer-btn">
+                <input type="submit" value="Ansh" id="ansh-btn" class="mc-answer-btn">
+                <input type="submit" value="Bhavik" id="bhavik-btn" class="mc-answer-btn">
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 id="question2">What is my favorite computer science course?</h3>
+                <p id="result2"></p>
+                <input type="text" id="fr-answer">
+                <button id="check-answer2">Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>

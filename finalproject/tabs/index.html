@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="btns">
+            <div class="save-btns">
+                <button class="btn save-btn" id="save-tab-btn">Save current tab</button>
+                <button class="btn save-btn" id="save-window-btn">Save current window</button>
+            </div>
+
+            <hr>
+
+            <div class="see-and-hide-tabs">
+                <button class="btn tabs-btn" id="see-saved-tabs-btn">See saved tabs</button>
+                <button class="btn tabs-btn" id="hide-saved-tabs-btn">Hide saved tabs</button>
+            </div>
+
+            <hr>
+
+            <div class="see-and-hide-windows">
+                <button class="btn windows-btn" id="see-saved-windows-btn">See saved windows</button>
+                <button class="btn windows-btn" id="hide-saved-windows-btn">Hide saved windows</button>
+            </div>
+        </div>
+
+        <div id="display">
+            <div id="tabs-display">
+            </div>
+
+            <div id="windows-display">
+            </div>
+        </div>
+
+        <div class="tab-already-added-modal" id="tab-already-added-modal">
+            <div class="close-modal-btn-container">
+				<button class="modal-close-btn" id="modal-close-btn-already-added">X</button>
+			</div>
+
+			<div class="modal-inner" id="tab-already-added-modal-inner">
+			</div>
+        </div>
+
+        <div class="window-already-added-modal" id="window-already-added-modal">
+            <div class="close-modal-btn-container-window">
+				<button class="modal-close-btn-window" id="modal-close-btn-window-already-added">X</button>
+			</div>
+
+			<div class="modal-inner-window" id="window-already-added-modal-inner">
+			</div>
+        </div>
+
+        <div id="change-tab-title-modal" class="change-tab-title-modal">
+            <input placeholder="Type in new tab title" id="change-tab-title-input">
+
+            <br>
+
+            <button type="submit" id="change-tab-title-submit-btn" style="margin: 5px;">Change</button>
+            <button type="button" id="cancel-tab-title-change-btn" style="margin: 5px;">Cancel</button>
+        </div>
+
+        <div id="change-window-title-modal" class="change-window-title-modal">
+            <input placeholder="Type in new window title" id="change-window-title-input">
+
+            <br>
+
+            <button type="submit" id="change-window-title-submit-btn" style="margin: 5px;">Change</button>
+            <button type="button" id="cancel-window-title-change-btn" style="margin: 5px;">Cancel</button>
+        </div>
+
+        <div class="custom-context-menu" id="custom-context-menu">
+            <ul>
+                <li>
+                    <button class="custom-context-menu-option">
+                        Open in new tab
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option">
+                        Open in new window
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option">
+                        Change tab title
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option">
+                        Revert tab title to original
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option">
+                        Remove from saved tabs
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="custom-context-menu" id="custom-context-menu-for-windows">
+            <ul>
+                <li>
+                    <button class="custom-context-menu-option-for-windows">
+                        Open all tabs in new window
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option-for-windows">
+                        See all window tabs
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option-for-windows">
+                        Change window title
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option-for-windows">
+                        Revert window title to original
+                    </button>
+                </li>
+                <li>
+                    <button class="custom-context-menu-option-for-windows">
+                        Remove from saved windows
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

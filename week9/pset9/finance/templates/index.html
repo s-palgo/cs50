@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Stock Name</th>
+                <th>Number of Shares</th>
+                <th>Price of 1 Share</th>
+                <th>Total Value of Holding (Number of Shares times Price of 1 Share)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for stock in user_stock_data %}
+                <tr>
+                    <td>{{ stock["stock"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>${{ stock["current_price"] }}</td>
+                    <td>${{ stock["total_value"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2 class="text-center">Cash total: ${{ cash_total }}</h2>
+    <h2 class="text-center">Total value: ${{ total_value }}</h2>
+{% endblock %}

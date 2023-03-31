@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1 class="mb-5">Your Transaction History</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Type of Transaction</th>
+                <th>Stock</th>
+                <th>Price at Time of Transaction</th>
+                <th>Quantity</th>
+                <th>Date of Transaction</th>
+                <th>Time of Transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction["type"].capitalize() }}</td>
+                    <td>{{ transaction["symbol"] }}</td>
+                    <td>${{ transaction["price_in_dollars"] / transaction["quantity"] }}</td>
+                    <td>{{ transaction["quantity"] }}</td>
+                    <td>{{ transaction["month"] }}/{{ transaction["day"] }}/{{ transaction["year"] }}</td>
+                    <td>{{ transaction["hour"] }}:{{ transaction["minute"]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
